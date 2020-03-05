@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { AuthService } from "../../services/auth.service";
 
 @Component({
-  selector: 'app-protegida',
-  templateUrl: './protegida.component.html',
+  selector: "app-protegida",
+  templateUrl: "./protegida.component.html",
   styles: []
 })
 export class ProtegidaComponent implements OnInit {
-
-  constructor() { }
+  constructor(public auth: AuthService) {}
 
   ngOnInit(): void {
+    this.auth.userProfile$.subscribe;
   }
-
 }
